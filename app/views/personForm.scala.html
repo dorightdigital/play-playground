@@ -1,0 +1,14 @@
+@(endpoint: Call, form: Form[PersonForm.Data])(implicit request: MessagesRequestHeader)
+
+@main("Create Person") {
+    <h1>This is where a person will be created.</h1>
+
+    @helper.form(endpoint) {
+        <h2>Hello World</h2>
+
+        @helper.inputText(form("name"))
+        @helper.inputText(form("age"))
+        <button>Submit</button>
+    }
+
+}
